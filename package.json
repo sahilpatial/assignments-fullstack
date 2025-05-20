@@ -1,0 +1,23 @@
+{
+  "name": "recruitly",
+  "version": "1.0.0",
+  "description": "Intelligent Resume Parser using AI",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "install:all": "npm install",
+    "start:client": "cd client && npm start",
+    "start:server": "cd server && npm run dev",
+    "start": "concurrently \"npm run start:client\" \"npm run start:server\"",
+    "build": "cd client && npm run build && cd ../server && npm run build",
+    "test": "cd client && npm test && cd ../server && npm test"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "author": "",
+  "license": "MIT"
+}
